@@ -1,0 +1,100 @@
+	<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	
+	<title>Guessing Game(Guess the number)</title> 
+	<meta charset="utf-8">
+
+	<style> 
+	
+		body { 
+	background: skyblue;
+	width: 50%; 
+	max-width: 800px; 
+	min-width: 480px; 
+	margin: 0 auto; 
+	text-align: center;
+	} 
+
+	h1{
+		background: #B2ABAB;
+		text-align: center;
+		 font-family: 'Baloo Bhai',cursive;
+		 color: #c6af4e;
+		 background-color:#333b3d;
+	}
+	.main{
+		 background-color:#939393;
+		 padding-bottom: 200px;
+		 padding-top: 100px;
+		 color: #333b3d;
+	}
+	p{
+		font-size: 20px;
+
+	}
+	#submitguess:hover{
+border:1px solid #fff;
+	color:black;
+	transition-duration:.5s;
+	
+	box-shadow:0px 5px 5px #000000;
+	background-color: #c6af4e;
+	
+	}
+	#submitguess{
+
+	color:#fff;
+	background-color: black;
+	padding: 10px;
+	
+	}
+
+
+	</style> 
+</head> 
+
+<body> <div class="main">
+<h1>Welcome To The Grand Guessing Game<br>...-...</h1> 
+
+<p>Guess the Random Number.<b>
+Can you guess it?</b></p> 
+
+<div class="form"> 
+	<label for="guessField">Enter a Number between 1-20: </label> 
+	<input type = "text" id = "guessField" class = "guessField"> <br><br>
+	<input type = "submit" value = "Submit guess"
+		class = "guessSubmit" id = "submitguess"> 
+</div> 
+
+<script> 
+
+	
+	var y = Math.floor(Math.random() * 20 + 1); 
+	
+	var guess = 1; 
+	
+	document.getElementById("submitguess").onclick = function(){ 
+
+var x = document.getElementById("guessField").value; 
+
+if(x == y) 
+{	 
+	alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+			+ guess + " GUESS "); 
+} 
+else if(x > y) 
+{	 
+	guess++; 
+	alert("OOPS SORRY!! TRY A SMALLER NUMBER"); 
+} 
+else
+{ 
+	guess++; 
+	alert("OOPS SORRY!! TRY A GREATER NUMBER") 
+} 
+} 
+</script> 
+</div>
+</body> 
+</html>					 
